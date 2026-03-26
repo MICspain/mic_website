@@ -248,6 +248,127 @@
   line-height: 1.7;
 }
 
+/* --- COMING SOON (Pulso Electoral placeholder) --- */
+.coming-soon-section {
+  background: var(--color-off-white);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.coming-soon-card {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--color-white);
+  border-radius: 24px;
+  padding: 64px 48px;
+  box-shadow: 0 8px 40px rgba(34, 64, 153, 0.08);
+  border: 1px solid var(--color-light-gray);
+}
+
+.coming-soon-icon {
+  margin-bottom: 28px;
+}
+
+.coming-soon-icon svg {
+  animation: comingSoonPulse 3s ease-in-out infinite;
+}
+
+@keyframes comingSoonPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.coming-soon-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(16, 190, 232, 0.12), rgba(34, 64, 153, 0.08));
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 8px 24px;
+  border-radius: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  border: 1px solid rgba(16, 190, 232, 0.2);
+}
+
+.coming-soon-card h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 20px;
+}
+
+.coming-soon-card > p {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.coming-soon-features {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.csf-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.csf-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(34, 64, 153, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.csf-item span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.coming-soon-cta {
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .coming-soon-card {
+    padding: 48px 28px;
+  }
+  .coming-soon-card h2 {
+    font-size: 1.8rem;
+  }
+  .coming-soon-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon-card {
+    padding: 36px 20px;
+  }
+  .coming-soon-card h2 {
+    font-size: 1.5rem;
+  }
+  .coming-soon-card > p {
+    font-size: 0.95rem;
+  }
+}
+
 /* --- ELECTORAL TRACKING --- */
 .estimation-image {
   max-width: 900px;
