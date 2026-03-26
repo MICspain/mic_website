@@ -1,0 +1,401 @@
+/* ============================================
+   DEDICATED PAGE STYLES
+   (page-hero, team, process, section-more, blog-substack-header)
+   ============================================ */
+
+/* --- Page Hero (inner pages) --- */
+.page-hero {
+  padding: 150px 0 80px;
+  background: linear-gradient(135deg, #224099, #1a3380, #162c6e, #1a3380, #224099);
+  background-size: 300% 300%;
+  animation: heroGradient 12s ease infinite;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+@keyframes heroGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.page-hero .hero-label {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  color: #10BEE8;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 8px 20px;
+  border-radius: 50px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  border: 1px solid rgba(16, 190, 232, 0.25);
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-hero h1 .highlight {
+  color: #10BEE8;
+}
+
+.page-hero p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* --- Section "more" CTA --- */
+.section-more {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* --- Blog Substack Header --- */
+.blog-substack-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* --- TEAM SECTION --- */
+.team-section {
+  background: var(--color-off-white);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: var(--color-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-light-gray);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(34, 64, 153, 0.1);
+  border-color: transparent;
+}
+
+.team-photo {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #224099, #10BEE8);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.team-photo-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  z-index: 1;
+}
+
+.team-photo.no-photo .team-photo-placeholder {
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.team-info {
+  padding: 32px;
+}
+
+.team-info h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 6px;
+}
+
+.team-role {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.team-info p {
+  font-size: 0.92rem;
+  color: var(--color-text-light);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.team-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- PROCESS GRID (Servicios) --- */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.process-step {
+  text-align: center;
+  padding: 32px 20px;
+  position: relative;
+}
+
+.process-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  opacity: 0.3;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.process-step h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 12px;
+}
+
+.process-step p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* --- DIFFERENTIATOR CARDS (Servicios) --- */
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.diff-card {
+  display: flex;
+  gap: 20px;
+  background: var(--color-white);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--color-light-gray);
+  transition: all 0.3s ease;
+}
+
+.diff-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(34, 64, 153, 0.1);
+  border-color: transparent;
+}
+
+.diff-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(34, 64, 153, 0.08);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diff-text h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+}
+
+.diff-text p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* --- ELECTORAL TRACKING --- */
+.estimation-image {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-light-gray);
+}
+
+.estimation-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.electoral-resources {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.electoral-resource-card {
+  display: flex;
+  gap: 24px;
+  background: var(--color-white);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--color-light-gray);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.electoral-resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(34, 64, 153, 0.1);
+  border-color: transparent;
+}
+
+.erc-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.erc-article {
+  background: rgba(16, 190, 232, 0.1);
+  color: #10BEE8;
+}
+
+.erc-methodology {
+  background: rgba(34, 64, 153, 0.08);
+  color: #224099;
+}
+
+.erc-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+}
+
+.erc-content p {
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.erc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: gap 0.3s;
+}
+
+.electoral-resource-card:hover .erc-link {
+  gap: 10px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .electoral-resources {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .diff-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 120px 0 60px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .diff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diff-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero h1 {
+    font-size: 1.8rem;
+  }
+}

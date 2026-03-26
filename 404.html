@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página no encontrada - More in Common España">
+  <title>Página no encontrada - More in Common España</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <style>
+    .error-page {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+    }
+    .error-content { max-width: 500px; }
+    .error-code {
+      font-size: 8rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 16px;
+      opacity: 0.15;
+    }
+    .error-content h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+    }
+    .error-content p {
+      font-size: 1.05rem;
+      color: var(--color-text-light);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/MiC_logo.png" alt="More in Common España">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="estudios.html">Estudios</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="pulso-electoral.html">Pulso electoral</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="mailto:hola@moreincommon.com" class="nav-cta">Contacto</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" aria-label="Abrir menú" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="error-page">
+    <div class="error-content">
+      <div class="error-code">404</div>
+      <h1>Parece que esta página no existe</h1>
+      <p>La página que buscas ha sido movida, eliminada o quizás nunca existió. Pero tranquilo, tenemos mucho más en común de lo que nos separa.</p>
+      <a href="index.html" class="btn btn-dark">Volver al inicio <span>→</span></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <span>&copy; 2025 More in Common España. Todos los derechos reservados.</span>
+        <a href="privacidad.html" style="color: rgba(255,255,255,0.35);">Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

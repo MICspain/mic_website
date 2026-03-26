@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# PDF files (hosted externally)
+pdfs/
+
+# Font source files (web fonts already in fonts/)
+Sailec-Font/
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/

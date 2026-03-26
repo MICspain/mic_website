@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moreincommon.es/sitemap.xml
+
+# Disallow crawling of data files
+Disallow: /data/
+Disallow: /fonts/
