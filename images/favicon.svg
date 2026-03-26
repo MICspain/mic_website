@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 380">
+  <defs>
+    <!-- Clip to intersection of TL and TR circles -->
+    <clipPath id="clip-tl-tr">
+      <circle cx="95" cy="95" r="95"/>
+    </clipPath>
+    <clipPath id="clip-tr-tl">
+      <circle cx="285" cy="95" r="95"/>
+    </clipPath>
+    <clipPath id="clip-tl-bl">
+      <circle cx="95" cy="95" r="95"/>
+    </clipPath>
+    <clipPath id="clip-bl-tl">
+      <circle cx="95" cy="285" r="95"/>
+    </clipPath>
+    <clipPath id="clip-tr-br">
+      <circle cx="285" cy="95" r="95"/>
+    </clipPath>
+    <clipPath id="clip-br-tr">
+      <circle cx="285" cy="285" r="95"/>
+    </clipPath>
+    <clipPath id="clip-bl-br">
+      <circle cx="95" cy="285" r="95"/>
+    </clipPath>
+    <clipPath id="clip-br-bl">
+      <circle cx="285" cy="285" r="95"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Base circles with outer colors -->
+  <circle cx="95" cy="95" r="95" fill="#12a059"/>
+  <circle cx="285" cy="95" r="95" fill="#20409a"/>
+  <circle cx="95" cy="285" r="95" fill="#20409a"/>
+  <circle cx="285" cy="285" r="95" fill="#12a059"/>
+  
+  <!-- Cyan overlaps: TL-TR intersection -->
+  <g clip-path="url(#clip-tl-tr)">
+    <circle cx="285" cy="95" r="95" fill="#1ec0eb"/>
+  </g>
+  
+  <!-- Cyan overlaps: TL-BL intersection -->
+  <g clip-path="url(#clip-tl-bl)">
+    <circle cx="95" cy="285" r="95" fill="#1ec0eb"/>
+  </g>
+  
+  <!-- Cyan overlaps: TR-BR intersection -->
+  <g clip-path="url(#clip-tr-br)">
+    <circle cx="285" cy="285" r="95" fill="#1ec0eb"/>
+  </g>
+  
+  <!-- Cyan overlaps: BL-BR intersection -->
+  <g clip-path="url(#clip-bl-br)">
+    <circle cx="285" cy="285" r="95" fill="#1ec0eb"/>
+  </g>
+</svg>
