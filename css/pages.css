@@ -520,3 +520,56 @@
     font-size: 1.8rem;
   }
 }
+
+/* --- PARTNERS SECTION (Servicios) --- */
+.partners-section {
+  padding: 48px 0;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--color-light-gray);
+  text-align: center;
+}
+
+.partners-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--color-text-light);
+  margin-bottom: 28px;
+}
+
+.partners-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+  padding: 0 24px;
+}
+
+.partner-logo {
+  height: 44px;
+  max-width: 180px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.45;
+  filter: grayscale(100%);
+  transition: opacity 0.3s, filter 0.3s;
+}
+
+.partner-logo:hover {
+  opacity: 0.85;
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .partners-logos {
+    gap: 40px;
+  }
+
+  .partner-logo {
+    height: 36px;
+    max-width: 140px;
+  }
+}
