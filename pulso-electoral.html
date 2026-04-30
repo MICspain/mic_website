@@ -64,43 +64,83 @@
     </div>
   </section>
 
-  <!-- ============ COMING SOON ============ -->
-  <section class="section coming-soon-section">
+  <!-- ============ MAIN ESTIMATION ============ -->
+  <section class="section" style="background: var(--color-white);">
     <div class="container">
-      <div class="coming-soon-card fade-in">
-        <div class="coming-soon-icon">
-          <svg width="72" height="72" fill="none" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" stroke="#10BEE8" stroke-width="1.5" stroke-dasharray="4 3"/>
-            <path d="M12 6v6l4 2" stroke="#224099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <span class="coming-soon-badge">Próximamente</span>
-        <h2>En construcción</h2>
-        <p>Estamos ultimando los detalles de nuestro modelo de estimación electoral. Pronto podrás consultar aquí nuestra estimación de voto actualizada, explorar los datos de nuestras encuestas y acceder a nuestros análisis electorales.</p>
-        <div class="coming-soon-features">
-          <div class="csf-item">
-            <div class="csf-icon">
-              <svg width="24" height="24" fill="none" stroke="#224099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-            </div>
-            <span>Estimación de voto</span>
+      <div class="section-header fade-in">
+        <span class="section-tag">Última actualización</span>
+        <h2 class="section-title">¿Cómo votaría España hoy?</h2>
+        <p class="section-subtitle">A partir de nuestras propias encuestas, construimos una fotografía actualizada de la intención de voto en España.</p>
+      </div>
+      <div class="estimation-image fade-in">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/28098545?1492577"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28098545/thumbnail" width="100%" alt="Estimación electoral - More in Common España"></noscript></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESOURCES ============ -->
+  <section class="section" style="background: var(--color-off-white);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Recursos</span>
+        <h2 class="section-title">Profundiza en el análisis</h2>
+      </div>
+      <div class="electoral-resources fade-in">
+        <!-- Substack article -->
+        <a href="https://moreincommones.substack.com" target="_blank" class="electoral-resource-card">
+          <div class="erc-icon erc-article">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <div class="csf-item">
-            <div class="csf-icon">
-              <svg width="24" height="24" fill="none" stroke="#224099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
-            <span>Análisis electoral</span>
+          <div class="erc-content">
+            <h3>Análisis electoral</h3>
+            <p>Nuestro artículo detallado donde desgranamos las tendencias, los movimientos entre bloques y lo que revelan las encuestas sobre el panorama electoral español.</p>
+            <span class="erc-link">Leer en Substack <span>→</span></span>
           </div>
-          <div class="csf-item">
-            <div class="csf-icon">
-              <svg width="24" height="24" fill="none" stroke="#224099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </div>
-            <span>Explorador de datos</span>
+        </a>
+        <!-- Methodology PDF -->
+        <a href="pdfs/informe-metodologico-electoral.pdf" download class="electoral-resource-card">
+          <div class="erc-icon erc-methodology">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           </div>
-        </div>
-        <div class="coming-soon-cta">
-          <a href="https://moreincommones.substack.com" target="_blank" class="btn btn-primary">Suscríbete para no perdértelo <span>→</span></a>
+          <div class="erc-content">
+            <h3>Informe metodológico</h3>
+            <p>Documento técnico que detalla la metodología de nuestro modelo de estimación: fuentes de datos, ponderación, tratamiento de la incertidumbre y validación.</p>
+            <span class="erc-link">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Descargar PDF
+            </span>
+          </div>
+        </a>
+        <!-- Microdatos -->
+        <div class="electoral-resource-card">
+          <div class="erc-icon" style="background: rgba(0, 158, 89, 0.1); color: #009E59;">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="erc-content">
+            <h3>Microdatos</h3>
+            <p>Descarga los microdatos de nuestras encuestas electorales para que puedas realizar tus propios análisis y cruces de variables.</p>
+            <div class="erc-buttons">
+              <a href="data/df_final_publico.csv" download class="erc-link">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar datos (CSV)
+              </a>
+              <a href="pdfs/codebook-microdatos.pdf" download class="erc-link">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar codebook (PDF)
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>¿Quieres saber más sobre nuestro modelo electoral?</h2>
+      <p>Suscríbete para recibir cada actualización de nuestra estimación de voto.</p>
+      <a href="https://moreincommones.substack.com" target="_blank" class="btn btn-primary">Suscríbete en Substack <span>→</span></a>
     </div>
   </section>
 

@@ -454,10 +454,23 @@
   font-weight: 600;
   color: var(--color-primary);
   transition: gap 0.3s;
+  text-decoration: none;
 }
 
 .electoral-resource-card:hover .erc-link {
   gap: 10px;
+}
+
+.erc-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.erc-buttons .erc-link:hover {
+  gap: 10px;
+  color: var(--color-primary-dark, var(--color-primary));
 }
 
 /* --- Responsive --- */
