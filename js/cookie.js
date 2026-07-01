@@ -52,6 +52,7 @@
     </div>
     <div class="cookie-buttons">
       <button class="cookie-btn cookie-btn-decline" id="cookie-decline">Rechazar</button>
+      <button class="cookie-btn cookie-btn-save" id="cookie-save">Guardar preferencias</button>
       <button class="cookie-btn cookie-btn-accept" id="cookie-accept">Aceptar todas</button>
     </div>
   `;
@@ -66,28 +67,33 @@
     banner.classList.add('active');
   }, 800);
 
+  // Persist a decision and push it to Google Consent Mode (analytics.js).
+  function savePreferences(preferences) {
+    preferences.necessary = true;
+    preferences.timestamp = new Date().toISOString();
+    localStorage.setItem('mic_cookie_consent', JSON.stringify(preferences));
+    if (typeof window.micApplyConsent === 'function') {
+      window.micApplyConsent(preferences);
+    }
+    closeBanner();
+  }
+
   // Accept all
   document.getElementById('cookie-accept').addEventListener('click', () => {
-    const preferences = {
-      necessary: true,
-      analytics: true,
-      marketing: true,
-      timestamp: new Date().toISOString()
-    };
-    localStorage.setItem('mic_cookie_consent', JSON.stringify(preferences));
-    closeBanner();
+    savePreferences({ analytics: true, marketing: true });
   });
 
   // Decline (only necessary)
   document.getElementById('cookie-decline').addEventListener('click', () => {
-    const preferences = {
-      necessary: true,
-      analytics: false,
-      marketing: false,
-      timestamp: new Date().toISOString()
-    };
-    localStorage.setItem('mic_cookie_consent', JSON.stringify(preferences));
-    closeBanner();
+    savePreferences({ analytics: false, marketing: false });
+  });
+
+  // Save the exact toggle selection
+  document.getElementById('cookie-save').addEventListener('click', () => {
+    savePreferences({
+      analytics: document.getElementById('cookie-analytics').checked,
+      marketing: document.getElementById('cookie-marketing').checked
+    });
   });
 
   function closeBanner() {
