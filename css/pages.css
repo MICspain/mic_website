@@ -393,6 +393,11 @@
   margin: 0 auto;
 }
 
+.electoral-resources.two-cols {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 720px;
+}
+
 .electoral-resource-card {
   display: flex;
   gap: 24px;
@@ -525,6 +530,26 @@
   .diff-card {
     flex-direction: column;
     gap: 16px;
+  }
+
+  .electoral-resources.two-cols {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .electoral-resource-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding: 32px 28px;
+  }
+
+  .electoral-resource-card .erc-icon {
+    align-self: center;
+  }
+
+  .erc-buttons {
+    align-items: center;
   }
 }
 
