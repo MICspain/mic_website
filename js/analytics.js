@@ -1,8 +1,10 @@
 // ============================================
 // GOOGLE ANALYTICS 4 + Google Consent Mode v2
-// GA4 loads on every page, but analytics/ad storage
-// stays DENIED until the user grants consent via the
-// cookie banner (js/cookie.js). GDPR / LOPDGDD aligned.
+// GA4 loads on every page, but analytics storage stays
+// DENIED until the user grants consent via the cookie
+// banner (js/cookie.js). No usamos publicidad: el
+// almacenamiento de anuncios queda denegado siempre.
+// GDPR / LOPDGDD aligned.
 // ============================================
 
 (function () {
@@ -28,10 +30,7 @@
     var saved = JSON.parse(localStorage.getItem('mic_cookie_consent'));
     if (saved) {
       gtag('consent', 'update', {
-        analytics_storage: saved.analytics ? 'granted' : 'denied',
-        ad_storage: saved.marketing ? 'granted' : 'denied',
-        ad_user_data: saved.marketing ? 'granted' : 'denied',
-        ad_personalization: saved.marketing ? 'granted' : 'denied'
+        analytics_storage: saved.analytics ? 'granted' : 'denied'
       });
     }
   } catch (e) { /* ignore malformed storage */ }
@@ -48,10 +47,7 @@
   // 4) Called by the cookie banner whenever the user changes preferences.
   window.micApplyConsent = function (prefs) {
     gtag('consent', 'update', {
-      analytics_storage: prefs.analytics ? 'granted' : 'denied',
-      ad_storage: prefs.marketing ? 'granted' : 'denied',
-      ad_user_data: prefs.marketing ? 'granted' : 'denied',
-      ad_personalization: prefs.marketing ? 'granted' : 'denied'
+      analytics_storage: prefs.analytics ? 'granted' : 'denied'
     });
   };
 })();

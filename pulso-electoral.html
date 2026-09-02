@@ -74,8 +74,16 @@
         <h2 class="section-title">¿Cómo votaría España hoy?</h2>
       </div>
       <div class="fade-in" style="max-width: 900px; margin: 0 auto;">
-        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
-          <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;" src="https://www.canva.com/design/DAHNfr2wAFE/N4SgGJwedFKSpsoarH0keg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+        <div class="embed-consent"
+             data-embed-provider="canva"
+             data-embed-title="Estimación de voto - More in Common España"
+             data-embed-src="https://www.canva.com/design/DAHNfr2wAFE/N4SgGJwedFKSpsoarH0keg/view?embed">
+          <div class="embed-consent-inner">
+            <svg class="embed-consent-icon" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 14l3-3 2 2 3-4 2 3"/></svg>
+            <h3>Visualización alojada en Canva</h3>
+            <p>Al cargarla, Canva instalará cookies en tu dispositivo, incluido un identificador que dura un año. Más detalles en nuestra <a href="cookies.html">Política de Cookies</a>. También puedes consultar los mismos datos en el PDF que encontrarás justo debajo.</p>
+            <button type="button" class="embed-consent-btn">Ver la visualización</button>
+          </div>
         </div>
         <div style="text-align: center; margin-top: 24px;">
           <a href="pdfs/pulso-electoral-julio-2026.pdf" download class="btn btn-primary">
@@ -189,11 +197,12 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2025 More in Common España. Todos los derechos reservados.</span>
-        <span style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;"><a href="privacidad.html" style="color: rgba(255,255,255,0.35); transition: color 0.3s;">Política de privacidad</a><a href="aviso-legal.html" style="color: rgba(255,255,255,0.35); transition: color 0.3s;">Aviso legal</a></span>
+        <span style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;"><a href="privacidad.html" style="color: rgba(255,255,255,0.35); transition: color 0.3s;">Política de privacidad</a><a href="aviso-legal.html" style="color: rgba(255,255,255,0.35); transition: color 0.3s;">Aviso legal</a><a href="cookies.html" style="color: rgba(255,255,255,0.35); transition: color 0.3s;">Política de cookies</a></span>
       </div>
     </div>
   </footer>
 
+  <script src="js/embed-consent.js"></script>
   <script src="js/main.js"></script>
   <script src="js/cookie.js"></script>
 </body>

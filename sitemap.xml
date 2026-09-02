@@ -41,6 +41,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://moreincommon.es/cookies.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://moreincommon.es/datos.html</loc>
     <lastmod>2026-04-06</lastmod>
     <priority>0.6</priority>

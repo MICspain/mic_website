@@ -25,7 +25,7 @@
       <h3>Utilizamos cookies</h3>
     </div>
     <div class="cookie-body">
-      <p>Usamos cookies propias y de terceros para mejorar tu experiencia, analizar el tráfico y personalizar contenido. Puedes aceptar todas, rechazar las no esenciales o configurar tus preferencias. Más información en nuestra <a href="privacidad.html">Política de Privacidad</a>.</p>
+      <p>Usamos cookies necesarias para el funcionamiento del sitio y cookies analíticas para entender cómo se utiliza y mejorarlo. No usamos cookies publicitarias. Puedes aceptarlas, rechazarlas o cambiar de opinión cuando quieras. Más información en nuestra <a href="cookies.html">Política de Cookies</a> y en nuestra <a href="privacidad.html">Política de Privacidad</a>.</p>
       <div class="cookie-toggles">
         <div class="cookie-toggle-row">
           <span class="cookie-toggle-label">Necesarias <span>(siempre activas)</span></span>
@@ -38,13 +38,6 @@
           <span class="cookie-toggle-label">Analíticas</span>
           <label class="toggle-switch">
             <input type="checkbox" id="cookie-analytics">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-        <div class="cookie-toggle-row">
-          <span class="cookie-toggle-label">Marketing</span>
-          <label class="toggle-switch">
-            <input type="checkbox" id="cookie-marketing">
             <span class="toggle-slider"></span>
           </label>
         </div>
@@ -80,19 +73,18 @@
 
   // Accept all
   document.getElementById('cookie-accept').addEventListener('click', () => {
-    savePreferences({ analytics: true, marketing: true });
+    savePreferences({ analytics: true });
   });
 
   // Decline (only necessary)
   document.getElementById('cookie-decline').addEventListener('click', () => {
-    savePreferences({ analytics: false, marketing: false });
+    savePreferences({ analytics: false });
   });
 
   // Save the exact toggle selection
   document.getElementById('cookie-save').addEventListener('click', () => {
     savePreferences({
-      analytics: document.getElementById('cookie-analytics').checked,
-      marketing: document.getElementById('cookie-marketing').checked
+      analytics: document.getElementById('cookie-analytics').checked
     });
   });
 
