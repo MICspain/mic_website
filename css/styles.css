@@ -1019,19 +1019,22 @@ ul {
   width: fit-content;
 }
 
-/* Etiquetas por categoría, con los colores de la guía de marca.
-   Cada par fondo/texto supera el 4.5:1 que pide la WCAG AA para
-   texto pequeño. Al añadir una categoría nueva, usa .tag-general
-   hasta que tenga color propio. */
-.tag-pulso-electoral { background: #E5F0F3; color: #17748F; } /* azul petróleo */
-.tag-clima           { background: #E0F3E7; color: #137D3C; } /* verde */
-.tag-salud           { background: #DDF3F0; color: #2B776F; } /* turquesa */
-.tag-migracion       { background: #FDECD9; color: #9A5D17; } /* naranja */
-.tag-vivienda        { background: #F2F1BF; color: #706E17; } /* lima */
-.tag-polarizacion    { background: #FCEAEA; color: #AD4E51; } /* coral */
-.tag-democracia      { background: #F1EDF5; color: #572F8B; } /* púrpura */
-.tag-internacional   { background: #F8EAF2; color: #B62C7C; } /* magenta */
-.tag-general         { background: #EDEEF1; color: #656B77; } /* gris azulado */
+/* Etiquetas por categoría. El fondo es la variante clara que ya
+   trae la guía de marca (no un tinte calculado) y el texto va
+   siempre en el azul oscuro de los titulares: así el color se
+   reconoce como de marca y todas superan el 11:1 de contraste.
+   Al añadir una categoría nueva, usa .tag-general. */
+.blog-card-tag { color: var(--color-dark); }
+
+.tag-pulso-electoral { background: #BBD8E0; } /* azul */
+.tag-clima           { background: #BBE3CB; } /* verde */
+.tag-salud           { background: #C0E3E0; } /* turquesa */
+.tag-migracion       { background: #FADEBF; } /* naranja */
+.tag-vivienda        { background: #F2F0C1; } /* lima */
+.tag-polarizacion    { background: #F7D1D2; } /* coral */
+.tag-democracia      { background: #E0D8E7; } /* púrpura */
+.tag-internacional   { background: #F0D8E7; } /* magenta */
+.tag-general         { background: #DADDE1; } /* gris azulado */
 
 .blog-card h3 {
   font-size: 1.15rem;
