@@ -110,12 +110,6 @@
                   <td>Guarda tu decisión sobre las categorías de cookies para no volver a mostrarte el aviso en cada visita.</td>
                   <td>24 meses (o hasta que borres los datos del navegador)</td>
                 </tr>
-                <tr>
-                  <td><code>mic_embed_consent</code></td>
-                  <td>More in Common España (propia, <em>localStorage</em>)</td>
-                  <td>Recuerda que has autorizado la carga de un contenido embebido de terceros (ver apartado 4.3), para no tener que pulsar el botón en cada visita.</td>
-                  <td>Hasta que borres los datos del navegador</td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -148,8 +142,7 @@
           <p>Puedes consultar información técnica detallada sobre estas cookies en la <a href="https://developers.google.com/analytics/devguides/collection/ga4/cookie-usage" target="_blank" rel="noopener">documentación de Google Analytics</a>.</p>
 
           <h3>4.3. Contenidos y servicios embebidos de terceros</h3>
-          <p>Algunas páginas incorporan contenidos o formularios alojados por terceros. Ninguno de ellos instala cookies en el dominio moreincommon.es, pero al cargarse comunican a sus proveedores datos técnicos de la conexión (como tu dirección IP) y, en algunos casos, instalan cookies propias en su dominio, sujetas a las políticas de sus respectivos titulares:</p>
-          <p>Cuando un contenido embebido instala cookies, <strong>no lo cargamos automáticamente</strong>: en su lugar mostramos un aviso con un botón, de forma que nada se almacena en tu dispositivo hasta que decides verlo. Tu decisión se recuerda para no repetir el paso en cada visita, y puedes revocarla con el botón de la sección 6.</p>
+          <p>Algunas páginas incorporan contenidos o formularios alojados por terceros. <strong>Ninguno de ellos instala cookies</strong>, ni en el dominio moreincommon.es ni en el suyo propio, pero al cargarse comunican a sus proveedores datos técnicos de la conexión (como tu dirección IP), sujeto a las políticas de sus respectivos titulares:</p>
           <div class="cookie-table-wrap">
             <table class="cookie-table">
               <thead>
@@ -161,12 +154,6 @@
                   <td>Formulario de suscripción a nuestra newsletter</td>
                   <td>Mostrar el formulario y gestionar su envío. No tenemos instalado el código de seguimiento de HubSpot, por lo que no se crean cookies de análisis ni de identificación de visitantes en nuestro sitio.</td>
                   <td><a href="https://legal.hubspot.com/privacy-policy" target="_blank" rel="noopener">Política de HubSpot</a></td>
-                </tr>
-                <tr>
-                  <td>Canva</td>
-                  <td>Visualizaciones embebidas en <a href="pulso-electoral.html">Pulso electoral</a></td>
-                  <td>Mostrar el contenido embebido. <strong>Solo se carga si pulsas el botón "Ver la visualización"</strong>. Al hacerlo, Canva instala cookies propias en el dominio <code>canva.com</code>: <code>CDI</code> (identificador del visualizador, 1 año), <code>CL</code> (idioma, 30 días) y <code>__cf_bm</code> y <code>_cfuvid</code> (seguridad y detección de bots de Cloudflare, de corta duración o de sesión). Muchos navegadores bloquean por defecto este tipo de cookies de terceros.</td>
-                  <td><a href="https://www.canva.com/policies/privacy-policy/" target="_blank" rel="noopener">Política de Canva</a></td>
                 </tr>
                 <tr>
                   <td>jsDelivr</td>
@@ -192,7 +179,7 @@
           <h2>6. Cómo gestionar tus preferencias</h2>
           <p>La primera vez que accedes a nuestro sitio web te mostramos un panel donde puedes aceptar las cookies analíticas o rechazarlas. Puedes cambiar tu decisión cuando quieras desde el siguiente botón:</p>
           <p><button type="button" class="cookie-prefs-btn" id="cookiePrefsBtn">Cambiar mis preferencias de cookies</button></p>
-          <p>El botón restablece tanto tu elección sobre las cookies analíticas como el permiso que hubieras dado a los contenidos embebidos de terceros. Retirar el consentimiento es tan sencillo como otorgarlo y no afecta al acceso a los contenidos del sitio web.</p>
+          <p>Retirar el consentimiento es tan sencillo como otorgarlo y no afecta al acceso a los contenidos del sitio web.</p>
           <p>Además, tu decisión <strong>caduca a los 24 meses</strong>: transcurrido ese plazo volveremos a mostrarte el panel para que la confirmes o la cambies.</p>
         </div>
 
@@ -278,11 +265,9 @@
 
   <!-- ============ JAVASCRIPT ============ -->
   <script>
-    // Reabre el panel de consentimiento y revoca también el permiso
-    // concedido a los contenidos embebidos de terceros.
+    // Reabre el panel de consentimiento borrando la decisión guardada.
     document.getElementById('cookiePrefsBtn').addEventListener('click', function () {
       localStorage.removeItem('mic_cookie_consent');
-      localStorage.removeItem('mic_embed_consent');
       location.reload();
     });
   </script>
