@@ -1019,9 +1019,19 @@ ul {
   width: fit-content;
 }
 
-.tag-blue { background: rgba(34, 64, 153, 0.08); color: var(--color-primary); }
-.tag-cyan { background: rgba(16, 190, 232, 0.1); color: #0a9ec0; }
-.tag-green { background: rgba(0, 158, 89, 0.1); color: var(--color-tertiary); }
+/* Etiquetas por categoría, con los colores de la guía de marca.
+   Cada par fondo/texto supera el 4.5:1 que pide la WCAG AA para
+   texto pequeño. Al añadir una categoría nueva, usa .tag-general
+   hasta que tenga color propio. */
+.tag-pulso-electoral { background: #E5F0F3; color: #17748F; } /* azul petróleo */
+.tag-clima           { background: #E0F3E7; color: #137D3C; } /* verde */
+.tag-salud           { background: #DDF3F0; color: #2B776F; } /* turquesa */
+.tag-migracion       { background: #FDECD9; color: #9A5D17; } /* naranja */
+.tag-vivienda        { background: #F2F1BF; color: #706E17; } /* lima */
+.tag-polarizacion    { background: #FCEAEA; color: #AD4E51; } /* coral */
+.tag-democracia      { background: #F1EDF5; color: #572F8B; } /* púrpura */
+.tag-internacional   { background: #F8EAF2; color: #B62C7C; } /* magenta */
+.tag-general         { background: #EDEEF1; color: #656B77; } /* gris azulado */
 
 .blog-card h3 {
   font-size: 1.15rem;
