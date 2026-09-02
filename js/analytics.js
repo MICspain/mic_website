@@ -12,6 +12,24 @@
 
   var GA_ID = 'G-72L4E9P68P';
 
+  // El consentimiento caduca a los 24 meses: pasado ese plazo se
+  // vuelve a preguntar, como recomienda la Guía de cookies de la AEPD.
+  var CONSENT_MAX_AGE_MS = 730 * 24 * 60 * 60 * 1000;
+
+  // Devuelve las preferencias guardadas solo si siguen vigentes.
+  // Expuesta en window para que js/cookie.js aplique el mismo criterio.
+  window.micGetStoredConsent = function () {
+    try {
+      var saved = JSON.parse(localStorage.getItem('mic_cookie_consent'));
+      if (!saved || !saved.timestamp) return null;
+      var age = Date.now() - new Date(saved.timestamp).getTime();
+      if (isNaN(age) || age < 0 || age > CONSENT_MAX_AGE_MS) return null;
+      return saved;
+    } catch (e) {
+      return null;
+    }
+  };
+
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
   window.gtag = gtag;
@@ -25,15 +43,14 @@
     wait_for_update: 500
   });
 
-  // 2) Re-apply any decision the user already made on a previous visit.
-  try {
-    var saved = JSON.parse(localStorage.getItem('mic_cookie_consent'));
-    if (saved) {
-      gtag('consent', 'update', {
-        analytics_storage: saved.analytics ? 'granted' : 'denied'
-      });
-    }
-  } catch (e) { /* ignore malformed storage */ }
+  // 2) Re-apply any decision the user already made on a previous visit,
+  //    siempre que no haya caducado.
+  var saved = window.micGetStoredConsent();
+  if (saved) {
+    gtag('consent', 'update', {
+      analytics_storage: saved.analytics ? 'granted' : 'denied'
+    });
+  }
 
   // 3) Load the GA library.
   var s = document.createElement('script');

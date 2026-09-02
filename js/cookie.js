@@ -6,9 +6,13 @@
 (function() {
   'use strict';
 
-  // Check if consent was already given
-  const consent = localStorage.getItem('mic_cookie_consent');
-  if (consent) return; // Don't show banner if already decided
+  // El banner solo se oculta si hay una decisión previa VIGENTE
+  // (caduca a los 24 meses; ver js/analytics.js). Si el ayudante no
+  // estuviera disponible, se pregunta de nuevo por precaución.
+  const consent = typeof window.micGetStoredConsent === 'function'
+    ? window.micGetStoredConsent()
+    : null;
+  if (consent) return;
 
   // Create overlay
   const overlay = document.createElement('div');
