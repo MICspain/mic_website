@@ -796,6 +796,27 @@ ul {
   background: var(--color-white);
 }
 
+.studies-notice {
+  background: var(--color-off-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.studies-notice p {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.studies-notice a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .studies-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
