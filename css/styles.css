@@ -838,7 +838,9 @@ ul {
 }
 
 .study-card-image {
-  height: 220px;
+  /* Las portadas son apaisadas (~16:9). Con una altura fija la caja cambiaba de
+     proporcion segun el ancho de columna y recortaba los titulos. */
+  aspect-ratio: 16 / 9;
   position: relative;
   overflow: hidden;
 }
