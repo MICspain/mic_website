@@ -581,14 +581,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 64px;
+  gap: 44px;
   flex-wrap: wrap;
   padding: 0 24px;
 }
 
 .partner-logo {
-  height: 44px;
-  max-width: 180px;
+  height: 52px;
+  max-width: 210px;
   width: auto;
   object-fit: contain;
   opacity: 0.45;
@@ -601,14 +601,23 @@
   filter: grayscale(0%);
 }
 
+/* Pale logo: darken the grey state so it reads like the others */
+.partner-logo--pale {
+  filter: grayscale(100%) brightness(0.6) contrast(1.2);
+}
+
+.partner-logo--pale:hover {
+  filter: grayscale(0%);
+}
+
 @media (max-width: 768px) {
   .partners-logos {
     gap: 40px;
   }
 
   .partner-logo {
-    height: 36px;
-    max-width: 140px;
+    height: 44px;
+    max-width: 150px;
   }
 }
 
