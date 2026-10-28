@@ -1984,3 +1984,24 @@ body.page-exit {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
 }
+
+/* --- STATS BAR: three items --- */
+.stats-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .stats-grid--three .stat-item:nth-child(2)::after {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid--three {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid--three .stat-item::after {
+    display: none !important;
+  }
+}
