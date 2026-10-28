@@ -755,6 +755,16 @@
 
 @media (max-width: 1024px) {
   .team-grid--three {
+    gap: 20px;
+  }
+
+  .team-grid--three .team-info {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 860px) {
+  .team-grid--three {
     grid-template-columns: 1fr;
     max-width: 550px;
   }
