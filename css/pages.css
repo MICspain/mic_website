@@ -723,3 +723,21 @@
     font-size: 0.85rem;
   }
 }
+
+/* --- TEAM GRID: three in a row --- */
+.team-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  gap: 32px;
+}
+
+.team-grid--three .team-info {
+  padding: 28px;
+}
+
+@media (max-width: 1024px) {
+  .team-grid--three {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+  }
+}
