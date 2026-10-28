@@ -601,6 +601,11 @@
   filter: grayscale(0%);
 }
 
+/* Logos with more built-in whitespace or a compact mark */
+.partner-logo--lg {
+  height: 62px;
+}
+
 /* Pale logo: darken the grey state so it reads like the others */
 .partner-logo--pale {
   filter: grayscale(100%) brightness(0.6) contrast(1.2);
@@ -618,6 +623,10 @@
   .partner-logo {
     height: 44px;
     max-width: 150px;
+  }
+
+  .partner-logo--lg {
+    height: 52px;
   }
 }
 
